@@ -1,137 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PIACOA Ltd – International Legal Consulting</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #222;
-      background-color: #fff;
-    }
-    header {
-      background-color: #1E3A5F;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin: 10px 0 0 0;
-      font-size: 1.1em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #1E3A5F;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .contact a {
-      color: #1E3A5F;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #555;
-      border-top: 1px solid #ccc;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-      header p {
-        font-size: 1em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>PIACOA Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        .brand-text {
+            margin-left: 20px;
+        }
+
+        .brand-text h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .brand-text p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            margin-top: 0;
+            font-size: 24px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        ul {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .brand-text {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Header -->
- <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background-color: #1E3A5F; color: #fff;">
-  <!-- Logo à gauche -->
-  <div style="flex-shrink: 0;">
-    <img src="PIACOA_CANVA.png" alt="PIACOA Ltd Logo" style="height: 80px;">
-  </div>
-
-  <!-- Texte à droite -->
-  <div style="margin-left: 20px; text-align: right;">
-    <h1 style="margin: 0; font-size: 1.8em;">PIACOA Ltd</h1>
-    <p style="margin: 5px 0 0 0; font-size: 1em;">
-      Cross-border legal coordination and support for international litigation (Europe / Latin America)
-    </p>
-  </div>
+<header>
+    <div class="logo">
+        <img src="PIACOA_CANVA.png" alt="PIACOA Logo">
+        <div class="brand-text">
+            <h1>PIACOA Consulting</h1>
+            <p>Strategic Advisory • Legal Coordination • Risk & Due Diligence</p>
+        </div>
+    </div>
 </header>
 
+<main>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About PIACOA Ltd</h2>
-    <p>PIACOA Ltd is a small, independent consulting firm specializing in the coordination and support of cross-border legal matters.</p>
-    <p>We work primarily with European and Latin American law firms on complex litigation and multi-jurisdictional cases, providing:</p>
-    <ul>
-      <li>Legal documentation management</li>
-      <li>Contextual and regulatory analysis</li>
-      <li>Liaison between international legal teams</li>
-      <li>Project-based interventions for sensitive or complex matters</li>
-    </ul>
-    <p>PIACOA operates as a flexible, project-focused consultancy, ensuring confidentiality, precision, and timely delivery of legal support.</p>
-  </section>
+    <section>
+        <h2>About</h2>
+        <p>
+            PIACOA Consulting provides strategic advisory and operational coordination
+            for cross-border legal, regulatory, and risk-related matters.
+        </p>
+        <p>
+            We work alongside law firms, corporate counsel, and private stakeholders
+            in complex international environments, with a focus on discretion,
+            reliability, and actionable intelligence.
+        </p>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Coordination and support in cross-border litigation</li>
-      <li>Legal research and documentation management</li>
-      <li>Analysis of regulatory and geopolitical context</li>
-      <li>Liaison between legal teams across jurisdictions</li>
-      <li>Support for complex international cases and collective litigation</li>
-    </ul>
-  </section>
+    <section>
+        <h2>Areas of Expertise</h2>
+        <ul>
+            <li>Cross-border legal coordination</li>
+            <li>Strategic advisory in sensitive jurisdictions</li>
+            <li>Risk analysis & due diligence</li>
+            <li>Support for investigations and complex disputes</li>
+            <li>Interface between legal, corporate, and local actors</li>
+        </ul>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>For inquiries or project-based support, please reach out:</p>
-    <ul class="contact">
-      <li>Email: <a href="mailto:piacoaltd@gmail.com">piacoaltd@gmail.com</a></li>
-      <li>WhatsApp: +33 6 38 37 90 20</li>
-     <li>
-  LinkedIn:
-  <a href="https://www.linkedin.com/in/damien-croce-9a0a0b27/" target="_blank" rel="noopener noreferrer">
-    linkedin.com/in/damien-croce
-  </a>
-</li>
+    <section>
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>
+                For inquiries or project-based support, please reach out:
+            </p>
+            <p>
+                📧 Email: 
+                <a href="mailto:contact@piacoa.consulting">
+                    contact@piacoa.consulting
+                </a>
+            </p>
+            <p>
+                📱 WhatsApp: +33 6 31 81 68 44
+            </p>
+            <p>
+                🔗 LinkedIn: 
+                <a href="https://www.linkedin.com/in/damien-croce-9a0a0b27/" target="_blank">
+                    Damien Croce
+                </a>
+            </p>
+            <p>
+                <em>All inquiries are treated confidentially. Response within 24 hours.</em>
+            </p>
+        </div>
+    </section>
 
-    </ul>
-  </section>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 PIACOA Ltd. All rights reserved.
-  </footer>
+<footer>
+    © 2026 PIACOA Consulting — All rights reserved
+</footer>
 
 </body>
 </html>
