@@ -42,7 +42,7 @@ header{
 }
 
 .logo img{
-  height:60px; /* logo plus grand */
+  height:100px; /* logo agrandi */
 }
 
 nav a{
@@ -218,7 +218,7 @@ nav a:hover{
 }
 
 /* Contact Section */
-.contact{
+.contact, .form-section{
   text-align:center;
   padding:60px;
 }
@@ -227,14 +227,30 @@ nav a:hover{
   margin-bottom:10px;
 }
 
-.contact button{
-  margin-top:15px;
+.form-section form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+.form-section input, .form-section textarea{
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-size:15px;
+  resize:none;
+}
+
+.form-section button{
   background:#6c8a7c;
   color:white;
   border:none;
   padding:12px 22px;
   border-radius:4px;
   cursor:pointer;
+  font-size:15px;
 }
 
 /* Footer */
@@ -270,8 +286,10 @@ footer a:hover{
   .hero-content{
     margin:0 20px;
   }
+  .logo img{
+    height:80px; /* logo responsive plus petit sur mobile */
+  }
 }
-
 </style>
 </head>
 <body>
@@ -287,8 +305,7 @@ footer a:hover{
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#approach">Approach</a>
-    <a href="#contact">Contact</a>
-    <a class="contact-btn" href="contact-form.html">Get in Touch</a>
+    <a href="#form-section">Get in Touch</a>
   </nav>
 </header>
 
@@ -354,6 +371,17 @@ footer a:hover{
   <p>contact@piacoa.consulting</p>
 </section>
 
+<!-- Form Section -->
+<section id="form-section" class="form-section">
+  <h2>Get in Touch</h2>
+  <form action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 <!-- Footer -->
 <footer>
   <div>PIACOA</div>
@@ -362,6 +390,7 @@ footer a:hover{
     <a href="#about">About</a>
     <br><a href="#expertise">Expertise</a>
     <br><a href="#approach">Approach</a>
+    <br><a href="#form-section">Get in Touch</a>
   </div>
   <div>
     Contact<br>
