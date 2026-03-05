@@ -16,150 +16,188 @@ box-sizing:border-box;
 }
 
 body{
-font-family: 'Inter', sans-serif;
-background:#f4f5f7;
+font-family:Inter, sans-serif;
+background:#efefef;
 color:#222;
-line-height:1.7;
 }
 
+/* PAGE CONTAINER */
+
+.wrapper{
+max-width:1100px;
+margin:auto;
+background:white;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+
 header{
-background:#ffffff;
-padding:25px 60px;
 display:flex;
-align-items:center;
 justify-content:space-between;
-border-bottom:1px solid #e5e5e5;
+align-items:center;
+padding:20px 40px;
+border-bottom:1px solid #eee;
 }
 
 .logo{
+font-family:"Playfair Display", serif;
+font-size:20px;
+letter-spacing:2px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#555;
+font-size:14px;
+}
+
+nav a:hover{
+color:black;
+}
+
+.contact-btn{
+background:#6c8a7c;
+color:white;
+padding:8px 14px;
+border-radius:4px;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:360px;
+background:url("earth.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 }
 
-.logo img{
-height:70px;
+.hero-overlay{
+background:rgba(0,0,0,0.35);
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
 }
 
-.brand-text{
-margin-left:18px;
+.hero-content{
+position:relative;
+color:white;
+max-width:500px;
+margin-left:60px;
 }
 
-.brand-text h1{
-font-family:'Playfair Display', serif;
-font-size:30px;
-font-weight:600;
-letter-spacing:1px;
+.hero-content h1{
+font-family:"Playfair Display", serif;
+font-size:40px;
+margin-bottom:15px;
 }
 
-.brand-text p{
-font-size:13px;
-color:#666;
-margin-top:4px;
-letter-spacing:1px;
-}
-
-.hero{
-max-width:1200px;
-margin:60px auto 40px auto;
-padding:0 40px;
-text-align:center;
-}
-
-.hero h2{
-font-family:'Playfair Display', serif;
-font-size:44px;
-font-weight:500;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-color:#555;
-max-width:700px;
-margin:auto;
-}
-
-main{
-max-width:1100px;
-margin:40px auto;
-padding:0 30px;
-}
-
-section{
-background:white;
-padding:50px;
-margin-bottom:35px;
-border-radius:8px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-}
-
-section h2{
-font-family:'Playfair Display', serif;
-font-size:30px;
-margin-bottom:20px;
-}
-
-section p{
+.hero-content p{
 font-size:16px;
-color:#444;
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
-ul{
+.hero-content button{
+background:#6c8a7c;
+border:none;
+padding:10px 18px;
+color:white;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* ABOUT CARD */
+
+.about{
+padding:60px;
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap:40px;
+}
+
+.about img{
+width:100%;
+border-radius:6px;
+}
+
+.about-text h2{
+font-family:"Playfair Display", serif;
+margin-bottom:15px;
+}
+
+.about-text ul{
 margin-top:15px;
 padding-left:20px;
 }
 
-ul li{
-margin-bottom:10px;
-font-size:16px;
+.about-text li{
+margin-bottom:8px;
+}
+
+/* STRIP SECTION */
+
+.strip{
+background:#e9e6e2;
+padding:35px;
+text-align:center;
+font-size:15px;
 color:#444;
 }
 
-.contact-box{
-background:#fafafa;
-border-radius:6px;
-padding:30px;
-margin-top:20px;
+/* CONTACT */
+
+.contact{
+text-align:center;
+padding:60px;
 }
 
-.contact-box p{
+.contact p{
 margin-bottom:10px;
-font-size:16px;
 }
 
-.contact-box a{
-color:#000;
-font-weight:500;
+.contact button{
+margin-top:15px;
+background:#6c8a7c;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:4px;
+}
+
+/* FOOTER */
+
+footer{
+background:#4a4642;
+color:#ddd;
+padding:40px;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+
+footer a{
+color:#ddd;
 text-decoration:none;
 }
 
-.contact-box a:hover{
+footer a:hover{
 text-decoration:underline;
 }
 
-footer{
-text-align:center;
-padding:40px;
-color:#777;
-font-size:14px;
-margin-top:40px;
+/* MOBILE */
+
+@media(max-width:800px){
+
+.about{
+grid-template-columns:1fr;
 }
 
-@media (max-width:900px){
-
-header{
-flex-direction:column;
-align-items:flex-start;
-padding:25px 25px;
-}
-
-.hero h2{
-font-size:34px;
-}
-
-section{
-padding:35px;
+.hero-content{
+margin-left:30px;
 }
 
 }
@@ -169,130 +207,112 @@ padding:35px;
 
 <body>
 
+<div class="wrapper">
+
 <header>
 
-<div class="logo">
-<img src="PIACOA_CANVA.png" alt="PIACOA Logo">
+<div class="logo">PIACOA</div>
 
-<div class="brand-text">
-<h1>PIACOA Consulting</h1>
-<p>Strategic Advisory • Legal Coordination • Risk & Due Diligence</p>
-</div>
-
-</div>
+<nav>
+<a href="#">About</a>
+<a href="#">Expertise</a>
+<a href="#">Approach</a>
+<a href="#">Contact</a>
+<a class="contact-btn" href="#">Get in touch</a>
+</nav>
 
 </header>
 
 
-<div class="hero">
+<section class="hero">
 
-<h2>International Legal Coordination<br>and Strategic Advisory</h2>
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+<h1>Clarity for<br>Complex Environments</h1>
 
 <p>
-PIACOA Consulting is an independent advisory firm supporting complex
-cross-border legal matters, international litigation and sensitive
-multi-jurisdictional projects between Europe and Latin America.
+Independent legal & strategic advisory  
+for cross-border and sensitive matters
 </p>
+
+<button>Learn More</button>
 
 </div>
-
-
-<main>
-
-<section>
-
-<h2>About PIACOA Ltd</h2>
-
-<p>
-PIACOA Ltd is a small, independent consulting firm specializing in the coordination
-and support of cross-border legal matters.
-</p>
-
-<p>
-<strong>
-PIACOA has extensive experience supporting international litigation
-and complex cross-border disputes, particularly involving Europe
-and Latin America.
-</strong>
-</p>
-
-<p>
-We work primarily with European and Latin American law firms on complex litigation
-and multi-jurisdictional cases, providing:
-</p>
-
-<ul>
-<li>Legal documentation management</li>
-<li>Contextual and regulatory analysis</li>
-<li>Liaison between international legal teams</li>
-<li>Project-based interventions for sensitive or complex matters</li>
-</ul>
-
-<p>
-PIACOA operates as a flexible, project-focused consultancy ensuring
-confidentiality, precision and efficient coordination.
-</p>
 
 </section>
 
 
-<section>
+<section class="about">
 
-<h2>Areas of Expertise</h2>
+<img src="book.jpg">
+
+<div class="about-text">
+
+<h2>About PIACOA</h2>
+
+<p>
+PIACOA provides independent coordination and advisory
+support in complex international environments
+where legal, regulatory and human factors intersect.
+</p>
 
 <ul>
+<li>Contextual risk analysis</li>
 <li>Cross-border legal coordination</li>
-<li>Strategic advisory in sensitive jurisdictions</li>
-<li>Risk analysis and due diligence</li>
-<li>Support for investigations and complex disputes</li>
-<li>Interface between legal, corporate and local actors</li>
+<li>Institutional and judicial information exchange</li>
+<li>Strategic advisory for sensitive matters</li>
 </ul>
-
-</section>
-
-
-<section>
-
-<h2>Contact</h2>
-
-<div class="contact-box">
-
-<p>
-For inquiries or project-based support, please reach out:
-</p>
-
-<p>
-📧 Email :
-<a href="mailto:contact@piacoa.consulting">
-contact@piacoa.consulting
-</a>
-</p>
-
-<p>
-📱 WhatsApp : +33 6 31 81 68 44
-</p>
-
-<p>
-🔗 LinkedIn :
-<a href="https://www.linkedin.com/in/damien-croce-9a0a0b27/" target="_blank">
-Damien Croce
-</a>
-</p>
-
-<p>
-<em>All inquiries are treated confidentially. Response within 24 hours.</em>
-</p>
 
 </div>
 
 </section>
 
-</main>
+
+<section class="strip">
+
+International Context — Legal Clarity — Human Coordination
+
+<br><br>
+
+We connect stakeholders across legal, human and institutional
+systems to provide accurate and timely insight for decision makers.
+
+</section>
+
+
+<section class="contact">
+
+<p>PIACOA Ltd — Legal, Human & International Interface</p>
+
+<p>contact@piacoa.consulting</p>
+
+<button>Get in Touch</button>
+
+</section>
 
 
 <footer>
-© 2026 PIACOA Consulting — All rights reserved
+
+<div>PIACOA</div>
+
+<div>
+Quick Links<br>
+About
+</div>
+
+<div>
+Contact<br>
+contact@piacoa.consulting
+</div>
+
+<div>
+Follow us
+</div>
+
 </footer>
+
+</div>
 
 </body>
 </html>
