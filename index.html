@@ -108,31 +108,37 @@ border-radius:4px;
 cursor:pointer;
 }
 
-/* ABOUT CARD */
+/* ABOUT CARD & APPROACH */
 
-.about{
+.about, .approach{
 padding:60px;
 display:grid;
 grid-template-columns: 1fr 1fr;
 gap:40px;
 }
 
-.about img{
+.about img, .approach img{
 width:100%;
 border-radius:6px;
 }
 
-.about-text h2{
+.about-text, .approach-text{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.about-text h2, .approach-text h2{
 font-family:"Playfair Display", serif;
 margin-bottom:15px;
 }
 
-.about-text ul{
+.about-text ul, .approach-text ul{
 margin-top:15px;
 padding-left:20px;
 }
 
-.about-text li{
+.about-text li, .approach-text li{
 margin-bottom:8px;
 }
 
@@ -191,7 +197,7 @@ text-decoration:underline;
 
 @media(max-width:800px){
 
-.about{
+.about, .approach{
 grid-template-columns:1fr;
 }
 
@@ -239,95 +245,70 @@ align-items:flex-start;
 
 </header>
 
-
 <section class="hero">
-
 <div class="hero-overlay"></div>
-
 <div class="hero-content">
 <h1>Clarity for<br>Complex Environments</h1>
-
-<p>
-Independent legal & strategic advisory  
-for cross-border and sensitive matters
-</p>
-
+<p>Independent legal & strategic advisory for cross-border and sensitive matters</p>
 <button>Learn More</button>
-
 </div>
-
 </section>
 
-
 <section id="about" class="about">
-
 <img src="book.jpg" alt="About Image">
-
 <div class="about-text">
-
 <h2>About PIACOA</h2>
-
-<p>
-PIACOA provides independent coordination and advisory
-support in complex international environments
-where legal, regulatory and human factors intersect.
-</p>
-
+<p>PIACOA provides independent coordination and advisory support in complex international environments where legal, regulatory and human factors intersect.</p>
 <ul>
 <li>Contextual risk analysis</li>
 <li>Cross-border legal coordination</li>
 <li>Institutional and judicial information exchange</li>
 <li>Strategic advisory for sensitive matters</li>
 </ul>
-
 </div>
-
 </section>
 
 <section id="expertise" class="strip">
-
 International Context — Legal Clarity — Human Coordination
-
 <br><br>
+We connect stakeholders across legal, human and institutional systems to provide accurate and timely insight for decision makers.
+</section>
 
-We connect stakeholders across legal, human and institutional
-systems to provide accurate and timely insight for decision makers.
-
+<section id="approach" class="approach">
+<img src="/mnt/data/a_photograph_showcases_a_desk_setting_focusing_on.png" alt="Approach Image">
+<div class="approach-text">
+<h2>Our Approach</h2>
+<p>PIACOA adopts a structured methodology to navigate complex environments, combining legal insight, human coordination, and strategic analysis.</p>
+<ul>
+<li>Tailored cross-border solutions</li>
+<li>Collaborative stakeholder engagement</li>
+<li>Practical risk mitigation strategies</li>
+</ul>
+</div>
 </section>
 
 <section id="contact" class="contact">
-
 <p>PIACOA Ltd — Legal, Human & International Interface</p>
-
 <p>contact@piacoa.consulting</p>
-
 <button>Get in Touch</button>
-
 </section>
 
-
 <footer>
-
 <div>PIACOA</div>
-
 <div>
 Quick Links<br>
 <a href="#about">About</a>
 </div>
-
 <div>
 Contact<br>
 <a href="mailto:contact@piacoa.consulting">contact@piacoa.consulting</a>
 </div>
-
 <div>
 Follow us<br>
 <a href="https://www.instagram.com/piacoa.ltd/" target="_blank">
   <img src="INSTA.png" alt="Instagram" style="height:24px;">
 </a>
-
 </div>
-
 </footer>
 
 </div>
