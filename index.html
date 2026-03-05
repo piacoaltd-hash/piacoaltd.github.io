@@ -109,36 +109,36 @@ nav a:hover{
   cursor:pointer;
 }
 
-/* ABOUT CARD & APPROACH */
-.about, .approach{
+/* ABOUT CARD & APPROACH & LEARN MORE */
+.about, .approach, .learn-more{
   padding:60px;
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap:40px;
 }
 
-.about img, .approach img{
+.about img, .approach img, .learn-more img{
   width:100%;
   border-radius:6px;
 }
 
-.about-text, .approach-text{
+.about-text, .approach-text, .learn-text{
   display:flex;
   flex-direction:column;
   justify-content:center;
 }
 
-.about-text h2, .approach-text h2{
+.about-text h2, .approach-text h2, .learn-text h2{
   font-family:"Playfair Display", serif;
   margin-bottom:15px;
 }
 
-.about-text ul, .approach-text ul{
+.about-text ul, .approach-text ul, .learn-text ul{
   margin-top:15px;
   padding-left:20px;
 }
 
-.about-text li, .approach-text li{
+.about-text li, .approach-text li, .learn-text li{
   margin-bottom:8px;
 }
 
@@ -193,7 +193,7 @@ footer a:hover{
 /* MOBILE */
 @media(max-width:800px){
 
-  .about, .approach{
+  .about, .approach, .learn-more{
     grid-template-columns:1fr;
   }
 
@@ -231,7 +231,7 @@ footer a:hover{
   </div>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#learnmore">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
@@ -244,20 +244,31 @@ footer a:hover{
   <div class="hero-content">
     <h1>Clarity for<br>Complex Environments</h1>
     <p>Independent legal & strategic advisory for cross-border and sensitive matters</p>
-    <button>Learn More</button>
+    <button onclick="location.href='#learnmore'">Learn More</button>
   </div>
 </section>
 
-<section id="about" class="about">
-  <img src="book.jpg" alt="About Image">
-  <div class="about-text">
-    <h2>About PIACOA</h2>
-    <p>PIACOA provides independent coordination and advisory support in complex international environments where legal, regulatory and human factors intersect.</p>
+<!-- LEARN MORE / Detailed About PIACOA -->
+<section id="learnmore" class="learn-more">
+  <img src="book.jpg" alt="PIACOA Overview">
+  <div class="learn-text">
+    <h2>About PIACOA Ltd</h2>
+    <p>PIACOA Ltd is a small, independent consulting firm specializing in the coordination and support of cross-border legal matters. We have extensive experience supporting international litigation and complex cross-border disputes, particularly involving Europe and Latin America.</p>
+    <p>We work primarily with European and Latin American law firms on complex litigation and multi-jurisdictional cases, providing:</p>
     <ul>
-      <li>Contextual risk analysis</li>
+      <li>Legal documentation management</li>
+      <li>Contextual and regulatory analysis</li>
+      <li>Liaison between international legal teams</li>
+      <li>Project-based interventions for sensitive or complex matters</li>
+    </ul>
+    <p>PIACOA operates as a flexible, project-focused consultancy, ensuring confidentiality, precision, and timely delivery of legal support.</p>
+    <h3>Areas of Expertise</h3>
+    <ul>
       <li>Cross-border legal coordination</li>
-      <li>Institutional and judicial information exchange</li>
-      <li>Strategic advisory for sensitive matters</li>
+      <li>Strategic advisory in sensitive jurisdictions</li>
+      <li>Risk analysis & due diligence</li>
+      <li>Support for investigations and complex disputes</li>
+      <li>Interface between legal, corporate, and local actors</li>
     </ul>
   </div>
 </section>
@@ -291,7 +302,7 @@ footer a:hover{
   <div>PIACOA</div>
   <div>
     Quick Links<br>
-    <a href="#about">About</a>
+    <a href="#learnmore">About</a>
   </div>
   <div>
     Contact<br>
