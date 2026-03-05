@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact - PIACOA</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fa;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:700px;
+margin:80px auto;
+background:white;
+padding:40px;
+border-radius:8px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+margin-bottom:10px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:16px;
+}
+
+button{
+background:#0b3d91;
+color:white;
+border:none;
+padding:14px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#082c66;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact PIACOA</h1>
+<p>Please use the form below for professional inquiries.</p>
+
+<form action="https://formspree.io/f/mjgabaze" method="POST">
+
+<input type="text" name="name" placeholder="Your name" required>
+
+<input type="email" name="email" placeholder="Your email" required>
+
+<textarea name="message" rows="6" placeholder="Your message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
