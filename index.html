@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -16,7 +15,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* smooth scroll */
+  scroll-behavior: smooth;
 }
 
 body{
@@ -25,7 +24,7 @@ body{
   color:#222;
 }
 
-/* PAGE CONTAINER */
+/* Container */
 .wrapper{
   max-width:1100px;
   margin:auto;
@@ -33,7 +32,7 @@ body{
   box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
-/* HEADER */
+/* Header */
 header{
   display:flex;
   justify-content:space-between;
@@ -64,13 +63,16 @@ nav a:hover{
   border-radius:4px;
 }
 
-/* HERO */
+/* Hero */
 .hero{
   position:relative;
-  height:360px;
+  height:400px;
   background:url("earth.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
 }
 
 .hero-overlay{
@@ -84,65 +86,128 @@ nav a:hover{
 
 .hero-content{
   position:relative;
-  color:white;
-  max-width:500px;
-  margin-left:60px;
+  max-width:600px;
 }
 
 .hero-content h1{
   font-family:"Playfair Display", serif;
-  font-size:40px;
-  margin-bottom:15px;
+  font-size:42px;
+  margin-bottom:20px;
 }
 
 .hero-content p{
-  font-size:16px;
-  margin-bottom:20px;
+  font-size:18px;
+  margin-bottom:25px;
 }
 
 .hero-content button{
   background:#6c8a7c;
   border:none;
-  padding:10px 18px;
+  padding:12px 22px;
   color:white;
   border-radius:4px;
   cursor:pointer;
+  font-size:15px;
 }
 
-/* ABOUT CARD & APPROACH & LEARN MORE */
-.about, .approach, .learn-more{
-  padding:60px;
+/* About Section */
+.about{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   gap:40px;
+  padding:60px;
+  align-items:center;
 }
 
-.about img, .approach img, .learn-more img{
+.about img{
   width:100%;
   border-radius:6px;
 }
 
-.about-text, .approach-text, .learn-text{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.about-text h2, .approach-text h2, .learn-text h2{
+.about-text h2{
   font-family:"Playfair Display", serif;
   margin-bottom:15px;
+  font-size:28px;
 }
 
-.about-text ul, .approach-text ul, .learn-text ul{
-  margin-top:15px;
+.about-text p{
+  margin-bottom:15px;
+  line-height:1.6;
+}
+
+.about-text ul{
+  list-style-type: disc;
   padding-left:20px;
 }
 
-.about-text li, .approach-text li, .learn-text li{
+.about-text li{
   margin-bottom:8px;
 }
 
-/* STRIP SECTION */
+/* Expertise Section */
+.expertise{
+  background:#f6f6f6;
+  padding:50px 60px;
+  text-align:center;
+}
+
+.expertise h2{
+  font-family:"Playfair Display", serif;
+  margin-bottom:20px;
+  font-size:28px;
+}
+
+.expertise ul{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:20px;
+  list-style:none;
+  padding:0;
+}
+
+.expertise li{
+  background:white;
+  padding:20px;
+  border-radius:6px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  font-size:15px;
+}
+
+/* Approach Section */
+.approach{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:60px;
+  align-items:center;
+}
+
+.approach img{
+  width:100%;
+  border-radius:6px;
+}
+
+.approach-text h2{
+  font-family:"Playfair Display", serif;
+  margin-bottom:15px;
+  font-size:28px;
+}
+
+.approach-text p{
+  margin-bottom:15px;
+  line-height:1.6;
+}
+
+.approach-text ul{
+  list-style-type: disc;
+  padding-left:20px;
+}
+
+.approach-text li{
+  margin-bottom:8px;
+}
+
+/* Strip Section */
 .strip{
   background:#e9e6e2;
   padding:35px;
@@ -151,7 +216,7 @@ nav a:hover{
   color:#444;
 }
 
-/* CONTACT */
+/* Contact Section */
 .contact{
   text-align:center;
   padding:60px;
@@ -166,11 +231,12 @@ nav a:hover{
   background:#6c8a7c;
   color:white;
   border:none;
-  padding:10px 18px;
+  padding:12px 22px;
   border-radius:4px;
+  cursor:pointer;
 }
 
-/* FOOTER */
+/* Footer */
 footer{
   background:#4a4642;
   color:#ddd;
@@ -179,6 +245,7 @@ footer{
   justify-content:space-between;
   font-size:14px;
   align-items:center;
+  flex-wrap:wrap;
 }
 
 footer a{
@@ -190,37 +257,22 @@ footer a:hover{
   text-decoration:underline;
 }
 
-/* MOBILE */
-@media(max-width:800px){
-
-  .about, .approach, .learn-more{
+/* Responsive */
+@media(max-width:900px){
+  .about, .approach{
     grid-template-columns:1fr;
+    text-align:center;
   }
-
+  .about-text, .approach-text{
+    justify-content:center;
+  }
   .hero-content{
-    margin-left:30px;
+    margin:0 20px;
   }
-
-  header{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  nav{
-    margin-top:15px;
-  }
-
-  footer{
-    flex-direction:column;
-    gap:15px;
-    align-items:flex-start;
-  }
-
 }
 
 </style>
 </head>
-
 <body>
 
 <div class="wrapper">
@@ -231,7 +283,7 @@ footer a:hover{
   </div>
 
   <nav>
-    <a href="#learnmore">About</a>
+    <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
@@ -244,46 +296,43 @@ footer a:hover{
   <div class="hero-content">
     <h1>Clarity for<br>Complex Environments</h1>
     <p>Independent legal & strategic advisory for cross-border and sensitive matters</p>
-    <button onclick="location.href='#learnmore'">Learn More</button>
+    <button onclick="location.href='#about'">Learn More</button>
   </div>
 </section>
 
-<!-- LEARN MORE / Detailed About PIACOA -->
-<section id="learnmore" class="learn-more">
-  <img src="book.jpg" alt="PIACOA Overview">
-  <div class="learn-text">
+<!-- About Section -->
+<section id="about" class="about">
+  <img src="book.jpg" alt="About PIACOA">
+  <div class="about-text">
     <h2>About PIACOA Ltd</h2>
-    <p>PIACOA Ltd is a small, independent consulting firm specializing in the coordination and support of cross-border legal matters. We have extensive experience supporting international litigation and complex cross-border disputes, particularly involving Europe and Latin America.</p>
-    <p>We work primarily with European and Latin American law firms on complex litigation and multi-jurisdictional cases, providing:</p>
+    <p>PIACOA Ltd is an independent consulting firm providing coordination and advisory support for complex international and cross-border legal matters, primarily in Europe and Latin America.</p>
     <ul>
-      <li>Legal documentation management</li>
-      <li>Contextual and regulatory analysis</li>
+      <li>Support for international litigation and multi-jurisdictional cases</li>
+      <li>Legal documentation management and regulatory analysis</li>
       <li>Liaison between international legal teams</li>
-      <li>Project-based interventions for sensitive or complex matters</li>
-    </ul>
-    <p>PIACOA operates as a flexible, project-focused consultancy, ensuring confidentiality, precision, and timely delivery of legal support.</p>
-    <h3>Areas of Expertise</h3>
-    <ul>
-      <li>Cross-border legal coordination</li>
-      <li>Strategic advisory in sensitive jurisdictions</li>
-      <li>Risk analysis & due diligence</li>
-      <li>Support for investigations and complex disputes</li>
-      <li>Interface between legal, corporate, and local actors</li>
+      <li>Project-based interventions for sensitive matters</li>
     </ul>
   </div>
 </section>
 
-<section id="expertise" class="strip">
-  International Context — Legal Clarity — Human Coordination
-  <br><br>
-  We connect stakeholders across legal, human and institutional systems to provide accurate and timely insight for decision makers.
+<!-- Expertise Section -->
+<section id="expertise" class="expertise">
+  <h2>Areas of Expertise</h2>
+  <ul>
+    <li>Cross-border legal coordination</li>
+    <li>Strategic advisory in sensitive jurisdictions</li>
+    <li>Risk analysis & due diligence</li>
+    <li>Support for investigations and complex disputes</li>
+    <li>Interface between legal, corporate, and local actors</li>
+  </ul>
 </section>
 
+<!-- Approach Section -->
 <section id="approach" class="approach">
-  <img src="approach.png" alt="Approach Image">
+  <img src="approach.png" alt="Our Approach">
   <div class="approach-text">
     <h2>Our Approach</h2>
-    <p>PIACOA adopts a structured methodology to navigate complex environments, combining legal insight, human coordination, and strategic analysis.</p>
+    <p>PIACOA uses a structured methodology to navigate complex environments, combining legal insight, strategic planning, and human coordination to deliver actionable results.</p>
     <ul>
       <li>Tailored cross-border solutions</li>
       <li>Collaborative stakeholder engagement</li>
@@ -292,17 +341,26 @@ footer a:hover{
   </div>
 </section>
 
+<!-- Strip -->
+<section class="strip">
+  International Context — Legal Clarity — Human Coordination
+</section>
+
+<!-- Contact Section -->
 <section id="contact" class="contact">
   <p>PIACOA Ltd — Legal, Human & International Interface</p>
   <p>contact@piacoa.consulting</p>
   <button>Get in Touch</button>
 </section>
 
+<!-- Footer -->
 <footer>
   <div>PIACOA</div>
   <div>
     Quick Links<br>
-    <a href="#learnmore">About</a>
+    <a href="#about">About</a>
+    <br><a href="#expertise">Expertise</a>
+    <br><a href="#approach">Approach</a>
   </div>
   <div>
     Contact<br>
@@ -317,6 +375,5 @@ footer a:hover{
 </footer>
 
 </div>
-
 </body>
 </html>
