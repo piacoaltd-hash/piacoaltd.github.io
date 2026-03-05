@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact - PIACOA</title>
+
 <style>
+
 body{
 font-family: Arial, sans-serif;
 background:#f5f7fa;
@@ -28,9 +30,10 @@ form{
 display:flex;
 flex-direction:column;
 gap:15px;
+margin-top:20px;
 }
 
-input,textarea{
+input, textarea{
 padding:12px;
 border:1px solid #ccc;
 border-radius:5px;
@@ -50,6 +53,21 @@ cursor:pointer;
 button:hover{
 background:#082c66;
 }
+
+.back{
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
+background:#0b3d91;
+color:white;
+padding:12px 20px;
+border-radius:5px;
+}
+
+.back:hover{
+background:#082c66;
+}
+
 </style>
 </head>
 
@@ -68,9 +86,11 @@ background:#082c66;
 
 <textarea name="message" rows="6" placeholder="Your message" required></textarea>
 
-<button type="submit">Send Message</button>
+<button type="submit">Send</button>
 
 </form>
+
+<a href="index.html" class="back">Back to website</a>
 
 </div>
 
