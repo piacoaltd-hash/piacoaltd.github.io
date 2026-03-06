@@ -104,7 +104,24 @@ font-size:14px;
 
 </style>
 </head>
+<script>
+function showMessage(event) {
+event.preventDefault();
 
+const form = event.target;
+
+fetch(form.action, {
+method: "POST",
+body: new FormData(form),
+headers: { 'Accept': 'application/json' }
+}).then(response => {
+if (response.ok) {
+form.reset();
+document.getElementById("success-message").style.display = "block";
+}
+});
+}
+</script>
 <body>
 
 <div class="form-container">
@@ -122,8 +139,9 @@ font-size:14px;
 
 </form>
 
-<p id="success-message">Message successfully sent</p>
-
+<p id="success-message" style="display:none; color:#6c8a7c; margin-top:20px;">
+Message successfully sent.
+</p>
 <a href="index.html" class="back-btn">Back to Website</a>
 
 </div>
