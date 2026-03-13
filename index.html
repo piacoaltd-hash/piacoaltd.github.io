@@ -141,6 +141,48 @@ padding-left:20px;
 margin-bottom:8px;
 }
 
+/* VIDEOS */
+
+.videos{
+padding:60px;
+text-align:center;
+}
+
+.videos h2{
+font-family:"Playfair Display",serif;
+font-size:28px;
+margin-bottom:35px;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.video-box video{
+width:100%;
+border-radius:6px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.video-box p{
+margin-top:10px;
+font-size:14px;
+color:#444;
+}
+
+.video-box a{
+display:inline-block;
+margin-top:15px;
+padding:8px 14px;
+background:#6c8a7c;
+color:white;
+border-radius:4px;
+text-decoration:none;
+font-size:14px;
+}
+
 /* EXPERTISE */
 
 .expertise{
@@ -337,6 +379,42 @@ PIACOA is an independent consulting firm providing coordination and advisory sup
 </ul>
 
 </div>
+</section>
+
+<!-- VIDEOS SECTION -->
+
+<section class="videos">
+
+<h2>Video Introduction</h2>
+
+<div class="video-grid">
+
+<div class="video-box">
+<video controls>
+<source src="piacoa-fr.MOV" type="video/quicktime">
+</video>
+<p>Présentation en français</p>
+<a href="https://www.instagram.com/piacoa.ltd/" target="_blank">Follow PIACOA updates</a>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="piacoa-en.MOV" type="video/quicktime">
+</video>
+<p>Introduction in English</p>
+<a href="https://www.instagram.com/piacoa.ltd/" target="_blank">Follow PIACOA updates</a>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="piacoa-es.MOV" type="video/quicktime">
+</video>
+<p>Presentación en español</p>
+<a href="https://www.instagram.com/piacoa.ltd/" target="_blank">Follow PIACOA updates</a>
+</div>
+
+</div>
+
 </section>
 
 <section id="expertise" class="expertise">
